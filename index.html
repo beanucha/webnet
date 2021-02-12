@@ -1,0 +1,191 @@
+  
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <link rel="app-menu__icon" href="https://smile-vpn.net/asset/images/s.png"  type="image/x-app-menu__icon" />
+     <!-- Twitter meta-->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:site" content="@pratikborsadiya">
+    <meta property="twitter:creator" content="@pratikborsadiya">
+        <meta name="theme-color" content="#FF0000"> 
+    <!-- Open Graph Meta-->
+    <meta property="og:type" content="website">
+    <!--meta property="og:site_name" content="Vali Admin"-->
+    <meta property="og:title" content="SM VPN-TH - บริการเช่า VPN">
+    <!--meta property="og:url" content="http://pratikborsadiya.in/blog/vali-admin"-->
+    <meta property="og:image" content="https://smile-vpn.net/asset/images/s.png">
+    <meta property="og:description" content="SM VPN-TH - บริการเช่า VPN">
+  <title>SM VPN-TH - บริการเช่า VPN</title>
+  <link rel="shortcut icon" href="https://smile-vpn.net/asset/images/s.png"  />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Main CSS-->
+    <link rel="stylesheet" type="text/css" href="/asset/css/main.css?v=15">
+    <link rel="stylesheet" type="text/css" href="/asset/css/custom.css">
+    
+ <!-- Toastr -->
+  <link rel="stylesheet" href="/asset/toastr/toastr.min.css">
+    <!-- Font-app-menu__icon css-->
+    <link rel="stylesheet" type="text/css" href="/asset/plugin/font-awesome-4.7.0/css/font-awesome.min.css">
+   
+    <style type="text/css">
+     @media print
+{
+    table.gridtable     { page-break-after: auto; }
+    table.gridtable   tr    { page-break-inside:avoid;page-break-after: auto; }
+    table.gridtable   td    { page-break-inside:avoid; page-break-after:auto }
+    table.gridtable   thead { display:table-header-group }
+    table.gridtable   tfoot { display:table-footer-group }
+}
+.table {
+  white-space: nowrap; 
+}
+.btn{
+    /*font-size: 15px;*/
+    font-weight: 300;
+}
+
+
+.add-btn a{
+    /*font-size: 15px;*/
+    font-weight: 300;
+}
+.body{
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+
+@font-face {
+  font-family: 'SemiBold';
+  src: url('/asset/font/IBMPlexSansThai-SemiBold.ttf');
+  
+}
+
+@font-face {
+   font-family: 'Regular';
+  src: url('/asset/font/IBMPlexSansThai-Regular.ttf');
+}
+
+.text-title {
+  font-family: 'SemiBold',sans-serif;
+}
+
+.text-body{
+   font-family: 'Regular',sans-serif;
+}
+
+.card-body{
+border-radius: 5px;
+padding: 10px;
+}
+.card-smile{
+margin-right:auto;
+margin-left:auto;
+max-width:500px;
+}
+    
+  @media(max-width: 540px){
+   .pagination li{
+    font-size: 11px;
+    width: 100%;
+   }
+
+    }
+ </style>
+ 
+
+  </head>
+
+  <body class="app sidebar-mini text-body">
+        <!-- Essential javascripts for application to work-->
+        
+        
+    <script src="/asset/js/jquery-3.3.1.min.js"></script>
+    <script src="/asset/js/popper.min.js"></script>
+    <script src="/asset/js/bootstrap.min.js"></script>
+    <script src="/asset/js/main.js"></script>
+    <script src="/asset/js/jquery.blockUI.js.js"></script>
+    <!-- InputMask -->
+    <script src="/asset/plugin/moment/moment.min.js"></script>
+    <script src="/asset/plugin/inputmask/min/jquery.inputmask.bundle.min.js"></script>
+    <!-- Toastr -->
+    <script src="/asset/toastr/toastr.min.js"></script>
+    <!-- The javascript plugin to display page loading on top-->
+    <script src="/asset/js/plugins/pace.min.js"></script>
+    <script src="https://smile-vpn.net/asset/js/sweetalert.min.js"></script>
+    <!-- Select2 -->
+    <script src="/asset/plugin/select2/js/select2.full.min.js"></script>
+   
+   <!-- Data table plugin-->
+    <script type="text/javascript" src="/asset/js/plugins/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="/asset/js/plugins/dataTables.bootstrap.min.js"></script>
+
+   
+ <script type="text/javascript">
+       function form_smile(idform, idshow, link){
+        var form = $('#'+idform)[0];
+
+        // Create an FormData object
+        var data = new FormData(form);
+
+        $.ajax({
+            type: "POST",
+            enctype: 'multipart/form-data',
+            url: link,
+            data: data,
+            processData: false,
+            contentType: false,
+            cache: false,
+            timeout: 600000,
+            success: function (data) {
+
+                $("#"+idshow).html(data);
+                $.unblockUI();
+               // console.log("SUCCESS : ", data);
+               // $("#btnSubmit").prop("disabled", false);
+
+            },
+            error: function (e) {
+
+                $("#"+idshow).html(e.responseText);
+                $.unblockUI();
+               // console.log("ERROR : ", e);
+               // $("#btnSubmit").prop("disabled", false);
+
+            }
+        });
+}
+
+
+
+    </script>
+    <div class="ajax-content" >
+    <script>eval(function(p,a,c,k,e,r){e=String;if(!''.replace(/^/,String)){while(c--)r[c]=k[c]||c;k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('0=1(){2("/3")}',4,4,'onload|function|link_ajax|login'.split('|'),0,{}))
+</script>               </div>
+
+    
+<![if gt IE 9]>
+<script type="text/javascript" src="//unpkg.com/xlsx/dist/xlsx.full.min.js"></script>
+<![endif]>
+ <script type="text/javascript" src="/asset/js/my.js?v=22"></script>
+ <script type="text/javascript" src="/asset/js/download.js?v=2"></script>
+<!-- Histats.com  START  (aync)
+<script type="text/javascript">var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,4123172,4,19,200,40,00000011']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+hs.src = ('//s10.histats.com/js15_as.js');
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})();</script>
+<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?4123172&101" alt="" border="0"></a></noscript>
+Histats.com  END  -->
+
+
+ 
+</body>
+
+
+</html>
